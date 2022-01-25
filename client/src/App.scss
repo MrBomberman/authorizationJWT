@@ -45,18 +45,12 @@ body {
     width: 100%;
     border-radius: 15px;
 }
-// .btnForm {
-//     padding: 15px;
-//     width: 100%;
-// }
+
 .registrationForm > .divInput:focus-within {
     margin: 20px 5px;
     font-size: 20px;
 }
-// <!-- HTML !-->
-// <button class="button-27" role="button">Button 27</button>
 
-/* CSS */
 .button-27 {
   appearance: none;
   background-color: #113c8b;
@@ -99,6 +93,66 @@ body {
   transform: translateY(0);
 }
 
+.mainPage {
+    width: 100vw;
+    min-height: 100vh;
+    background: center / cover no-repeat url('https://cdn.hswstatic.com/gif/water-update.jpg')
+}
+
+.authMail {
+    margin-top: 0;
+    font-style: oblique 50deg;
+}
+
+.btnExit {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    padding: 15px;
+    background-color: crimson;
+    color: white;
+    border-radius: 15px;
+    border-color: crimson;
+    transition-duration: 1s;
+    font-size: 16px;
+}
+.btnExit:hover {
+    background-color: white;
+    color: crimson;
+}
+.statusSuccess {
+    color: rgb(25, 87, 12);
+}
+.statusNotSuccess {
+    color: red;
+}
+
+
+.mainBlock {
+    padding-top: 20px;
+    margin-left: 10px;
+}
+
+.btnUsers {
+    padding: 15px;
+    background-color: cyan;
+    border-radius: 15px;
+    color: darkblue;
+    border-color: cyan;
+    transition-duration: 1s;
+    font-size: 16px;
+}
+
+.btnUsers:hover {
+    background-color: darkblue;
+    color: cyan;
+}
+
+
+.userLi {
+    margin-top: 13px;
+    font-size: 16px;
+}
 
 
 
@@ -116,5 +170,23 @@ body {
     .button-27 {
         font-size: 13px;
     }
+    .authMail {
+        font-size: 20px;
+        max-width: 200px;
+    }
+    .statusSuccess , 
+    .statusNotSuccess {
+        font-size: 16px;
+    }
 
+}
+
+@media screen and (max-width: 574px) {
+    .btnUsers{
+        font-size: 13px;
+    }
+    .btnExit {
+        padding: 8px;
+        font-size: 14px;
+    } 
 }

@@ -36,16 +36,19 @@ function App() {
   }
 
   return (
-    <div>
-      <h1>{store.isAuth === true ? `User was authorized ${store.user.email}` : 'You need to authorize'}</h1>
-      <h4>{store.user.isActivated === true ? `Your account was verified` : 'Verify your account!!!'}</h4>
-      <button onClick={() => store.logout()}>Exit</button>
+    <div className='mainPage'>
+      <div className='mainBlock'>
+      <h1 className='authMail'>{store.isAuth === true ? `User was authorized ${store.user.email}` : 'You need to authorize'}</h1>
+      {store.user.isActivated === true ? <h2 className='statusSuccess'>Your account was verified</h2> : 
+      <h2 className='statusNotSuccess'>Verify your account!!!</h2>}
       <div>
-        <button onClick={getUsers}>Get all users</button>
+        <button className='btnUsers' onClick={getUsers}>Get all users</button>
       </div>
       {users.map(user => {
-        return <li key={user.email}>{user.email}</li>
+        return <li className='userLi' key={user.email}>{user.email}</li>
       })}
+      </div>
+      <button className='btnExit' onClick={() => store.logout()}>Exit</button>
     </div>
   );
 }
