@@ -10,27 +10,34 @@ const LoginForm = () => {
 
     return (
         <div className='container'>
-            {/* <div>
-                <img className='imgPic' src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/The_Great_Wave_off_Kanagawa.jpg/1280px-The_Great_Wave_off_Kanagawa.jpg" alt="" />
-            </div> */}
-            {/* <div className='formBlock'> */}
+            <h1 className='title'>REGISTRATION FORM</h1>
                 <div className='registrationForm'>
+                    <div className='divInput'>
+                        <input 
+                        className='inputForm'
+                        onChange={((e) => setEmail(e.target.value))}
+                        value={email}
+                        type="email" 
+                        placeholder='Email' />
+                    </div>
+                    <div className='divInput'>
                     <input 
-                    onChange={((e) => setEmail(e.target.value))}
-                    value={email}
-                    type="email" 
-                    placeholder='Email' />
-                    <input 
-                    onChange={((e) => setPassword(e.target.value))}
-                    value={password}
-                    type="password" 
-                    placeholder='Password' />
-                    <button onClick={() => store.login(email, password)}>
-                        LOGIN
-                    </button>
-                    <button onClick={() => store.registration(email, password)}>
-                        REGISTRATION
-                    </button>
+                        className='inputForm'
+                        onChange={((e) => setPassword(e.target.value))}
+                        value={password}
+                        type="password" 
+                        placeholder='Password' />
+                    </div>
+                    <div>
+                        <button className='button-27' onClick={() => store.login(email, password)}>
+                            LOGIN
+                        </button>
+                    </div>
+                    <div>
+                        <button className='button-27' onClick={() => store.registration(email, password)}>
+                            REGISTRATION
+                        </button>
+                    </div>
                 </div>
             {/* </div> */}
         </div>
