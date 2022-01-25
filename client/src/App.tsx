@@ -1,5 +1,5 @@
 import LoginForm from "./components/LoginForm";
-import './App.css';
+import './App.scss';
 import { useContext, useEffect, useState } from "react";
 import { Context } from "./index";
 import { observer } from "mobx-react-lite";
@@ -37,8 +37,8 @@ function App() {
 
   return (
     <div>
-      <h1>{store.isAuth == true ? `User was authorized ${store.user.email}` : 'You need to authorize'}</h1>
-      <h4>{store.user.isActivated == true ? `Your account was verified` : 'Verify your account!!!'}</h4>
+      <h1>{store.isAuth === true ? `User was authorized ${store.user.email}` : 'You need to authorize'}</h1>
+      <h4>{store.user.isActivated === true ? `Your account was verified` : 'Verify your account!!!'}</h4>
       <button onClick={() => store.logout()}>Exit</button>
       <div>
         <button onClick={getUsers}>Get all users</button>
